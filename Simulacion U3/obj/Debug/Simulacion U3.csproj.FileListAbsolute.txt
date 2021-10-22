@@ -4,7 +4,6 @@ C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\bin\Debug\Simulacio
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\bin\Debug\MaterialSkin.dll
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\bin\Debug\MathNet.Numerics.dll
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\bin\Debug\MathNet.Numerics.xml
-C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.AssemblyReference.cache
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion_U3.Form1.resources
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion_U3.Properties.Resources.resources
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.GenerateResource.cache
@@ -12,3 +11,4 @@ C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacio
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.CopyComplete
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion U3.exe
 C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion U3.pdb
+C:\Users\Martin\Documents\GitHub\Simulacion U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.AssemblyReference.cache

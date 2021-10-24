@@ -283,5 +283,59 @@ namespace Simulacion_U3
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double dat;
+            int tiradas;
+
+
+            dat = Convert.ToDouble(tx1.Text);
+            tiradas = Convert.ToInt32(tx2.Text);
+
+            String not = "X         RI  " + "\n";
+            
+
+
+            for (int i = 0; i < tiradas; i++)
+            {
+                not += i + "         " + binomial(dat, tiradas) + "\n";
+            }
+
+            richTextBox1.AppendText(not);
+        }
+
+
+        //BINOMIAL
+        public static int binomial(double dat , int tiradas)
+        {
+            int exitos = 0;
+            for (int i = 0; i < tiradas; i++)
+            {
+                if (bernou(tiradas)==1)
+                {
+                    exitos++;
+                }
+            }
+
+            return (exitos);
+        }
+
+
+        public static int  bernou(double p)
+        {
+
+            Random r = new Random();
+            double ri = r.Next();
+
+            if (ri<=p)
+            {
+                return (1);
+            }
+            else
+            {
+                return (0);
+            }
+        }
     }
 }

@@ -61,11 +61,18 @@ namespace Simulacion_U3
             this.txtExpN = new MaterialSkin.Controls.MaterialTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.InfoProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tx1 = new System.Windows.Forms.TextBox();
+            this.tx2 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUniforme)).BeginInit();
             this.materialCard1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.materialCard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).BeginInit();
@@ -277,12 +284,18 @@ namespace Simulacion_U3
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
+            this.tabPage3.Controls.Add(this.richTextBox1);
+            this.tabPage3.Controls.Add(this.tx2);
+            this.tabPage3.Controls.Add(this.tx1);
+            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.ImageKey = "2561393_square_icon.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1266, 610);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Pagina 3";
+            this.tabPage3.Text = "MC Normal";
             // 
             // tabPage4
             // 
@@ -292,7 +305,7 @@ namespace Simulacion_U3
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1266, 610);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Pagina4";
+            this.tabPage4.Text = "VA TI Bernoulli";
             // 
             // tabPage5
             // 
@@ -460,6 +473,57 @@ namespace Simulacion_U3
             this.InfoProvider.ContainerControl = this;
             this.InfoProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InfoProvider.Icon")));
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Dato:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Num. intentos:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 120);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Calcular";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tx1
+            // 
+            this.tx1.Location = new System.Drawing.Point(81, 26);
+            this.tx1.Name = "tx1";
+            this.tx1.Size = new System.Drawing.Size(100, 20);
+            this.tx1.TabIndex = 5;
+            // 
+            // tx2
+            // 
+            this.tx2.Location = new System.Drawing.Point(124, 63);
+            this.tx2.Name = "tx2";
+            this.tx2.Size = new System.Drawing.Size(160, 20);
+            this.tx2.TabIndex = 6;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.richTextBox1.Location = new System.Drawing.Point(313, 23);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(164, 342);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,6 +540,8 @@ namespace Simulacion_U3
             ((System.ComponentModel.ISupportInitialize)(this.tablaUniforme)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.materialCard4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).EndInit();
@@ -518,6 +584,12 @@ namespace Simulacion_U3
         private MaterialSkin.Controls.MaterialTextBox txtExp1;
         private MaterialSkin.Controls.MaterialTextBox txtExpN;
         private System.Windows.Forms.ErrorProvider InfoProvider;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox tx2;
+        private System.Windows.Forms.TextBox tx1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

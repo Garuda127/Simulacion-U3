@@ -31,7 +31,7 @@ namespace Simulacion_U3
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -54,6 +54,12 @@ namespace Simulacion_U3
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.canttx1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.RichTextBox();
+            this.bernoutxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.TbExponencial = new System.Windows.Forms.DataGridView();
@@ -65,14 +71,25 @@ namespace Simulacion_U3
             this.btnOk = new MaterialSkin.Controls.MaterialButton();
             this.txtExp1 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtExpN = new MaterialSkin.Controls.MaterialTextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
+            this.TbPoisson = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.txtPoissonHoras = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPoissonN = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnPoissonOk = new MaterialSkin.Controls.MaterialButton();
+            this.txtPoissonE = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPoissonLam = new MaterialSkin.Controls.MaterialTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.InfoProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.bernoutxt = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.canttx1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -84,6 +101,10 @@ namespace Simulacion_U3
             this.materialCard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).BeginInit();
             this.materialCard3.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.materialCard6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TbPoisson)).BeginInit();
+            this.materialCard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +127,7 @@ namespace Simulacion_U3
             this.materialTabControl1.Controls.Add(this.tabPage3);
             this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Controls.Add(this.tabPage5);
+            this.materialTabControl1.Controls.Add(this.tabPage6);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -371,6 +393,57 @@ namespace Simulacion_U3
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "VA TI Bernoulli";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cantidad:";
+            // 
+            // canttx1
+            // 
+            this.canttx1.Location = new System.Drawing.Point(100, 77);
+            this.canttx1.Name = "canttx1";
+            this.canttx1.Size = new System.Drawing.Size(171, 20);
+            this.canttx1.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(78, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Calcular";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel2.Location = new System.Drawing.Point(318, 39);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 342);
+            this.panel2.TabIndex = 8;
+            this.panel2.Text = "";
+            // 
+            // bernoutxt
+            // 
+            this.bernoutxt.Location = new System.Drawing.Point(78, 39);
+            this.bernoutxt.Name = "bernoutxt";
+            this.bernoutxt.Size = new System.Drawing.Size(146, 20);
+            this.bernoutxt.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Dato:";
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.materialCard4);
@@ -402,8 +475,8 @@ namespace Simulacion_U3
             // 
             this.TbExponencial.AllowUserToAddRows = false;
             this.TbExponencial.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.NullValue = "0";
-            this.TbExponencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.NullValue = "0";
+            this.TbExponencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.TbExponencial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TbExponencial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -528,6 +601,215 @@ namespace Simulacion_U3
             this.txtExpN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
             this.txtExpN.Validating += new System.ComponentModel.CancelEventHandler(this.txtExpN_Validating);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.materialCard6);
+            this.tabPage6.Controls.Add(this.materialCard5);
+            this.tabPage6.ImageKey = "uno.png";
+            this.tabPage6.Location = new System.Drawing.Point(4, 39);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "VA TI (poisson)";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // materialCard6
+            // 
+            this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard6.Controls.Add(this.TbPoisson);
+            this.materialCard6.Depth = 0;
+            this.materialCard6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard6.Location = new System.Drawing.Point(203, 3);
+            this.materialCard6.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard6.Name = "materialCard6";
+            this.materialCard6.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard6.Size = new System.Drawing.Size(1060, 604);
+            this.materialCard6.TabIndex = 3;
+            // 
+            // TbPoisson
+            // 
+            this.TbPoisson.AllowUserToAddRows = false;
+            this.TbPoisson.AllowUserToDeleteRows = false;
+            this.TbPoisson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TbPoisson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column14,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13});
+            this.TbPoisson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbPoisson.Location = new System.Drawing.Point(14, 14);
+            this.TbPoisson.Name = "TbPoisson";
+            this.TbPoisson.Size = new System.Drawing.Size(1032, 576);
+            this.TbPoisson.TabIndex = 0;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "Numeros";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "Probabilidad";
+            this.Column8.Name = "Column8";
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column14.HeaderText = "Probabilidad Acomulada";
+            this.Column14.Name = "Column14";
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "Ri De";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "Ri A";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column11.HeaderText = "Horas";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.HeaderText = "Ri";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column13.HeaderText = "No.Piezas";
+            this.Column13.Name = "Column13";
+            // 
+            // materialCard5
+            // 
+            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard5.Controls.Add(this.txtPoissonHoras);
+            this.materialCard5.Controls.Add(this.txtPoissonN);
+            this.materialCard5.Controls.Add(this.btnPoissonOk);
+            this.materialCard5.Controls.Add(this.txtPoissonE);
+            this.materialCard5.Controls.Add(this.txtPoissonLam);
+            this.materialCard5.Depth = 0;
+            this.materialCard5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard5.Location = new System.Drawing.Point(3, 3);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard5.Name = "materialCard5";
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard5.Size = new System.Drawing.Size(200, 604);
+            this.materialCard5.TabIndex = 2;
+            // 
+            // txtPoissonHoras
+            // 
+            this.txtPoissonHoras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonHoras.Depth = 0;
+            this.txtPoissonHoras.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonHoras.Hint = "Horas";
+            this.txtPoissonHoras.LeadingIcon = null;
+            this.txtPoissonHoras.Location = new System.Drawing.Point(17, 185);
+            this.txtPoissonHoras.MaxLength = 50;
+            this.txtPoissonHoras.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonHoras.Multiline = false;
+            this.txtPoissonHoras.Name = "txtPoissonHoras";
+            this.txtPoissonHoras.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonHoras.TabIndex = 4;
+            this.txtPoissonHoras.Text = "";
+            this.txtPoissonHoras.TrailingIcon = null;
+            this.txtPoissonHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
+            this.txtPoissonHoras.Validating += new System.ComponentModel.CancelEventHandler(this.txtPoissonHoras_Validating);
+            // 
+            // txtPoissonN
+            // 
+            this.txtPoissonN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonN.Depth = 0;
+            this.txtPoissonN.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonN.Hint = "Numeros";
+            this.txtPoissonN.LeadingIcon = null;
+            this.txtPoissonN.Location = new System.Drawing.Point(17, 129);
+            this.txtPoissonN.MaxLength = 50;
+            this.txtPoissonN.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonN.Multiline = false;
+            this.txtPoissonN.Name = "txtPoissonN";
+            this.txtPoissonN.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonN.TabIndex = 3;
+            this.txtPoissonN.Text = "";
+            this.txtPoissonN.TrailingIcon = null;
+            this.txtPoissonN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
+            this.txtPoissonN.Validating += new System.ComponentModel.CancelEventHandler(this.txtPoissonN_Validating);
+            // 
+            // btnPoissonOk
+            // 
+            this.btnPoissonOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoissonOk.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPoissonOk.Depth = 0;
+            this.btnPoissonOk.HighEmphasis = true;
+            this.btnPoissonOk.Icon = null;
+            this.btnPoissonOk.Location = new System.Drawing.Point(68, 244);
+            this.btnPoissonOk.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoissonOk.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPoissonOk.Name = "btnPoissonOk";
+            this.btnPoissonOk.Size = new System.Drawing.Size(64, 36);
+            this.btnPoissonOk.TabIndex = 2;
+            this.btnPoissonOk.Text = "Ok";
+            this.btnPoissonOk.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPoissonOk.UseAccentColor = false;
+            this.btnPoissonOk.UseVisualStyleBackColor = true;
+            this.btnPoissonOk.Click += new System.EventHandler(this.materialButton1_Click_1);
+            // 
+            // txtPoissonE
+            // 
+            this.txtPoissonE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonE.Depth = 0;
+            this.txtPoissonE.Enabled = false;
+            this.txtPoissonE.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonE.Hint = "e";
+            this.txtPoissonE.LeadingIcon = null;
+            this.txtPoissonE.Location = new System.Drawing.Point(17, 73);
+            this.txtPoissonE.MaxLength = 50;
+            this.txtPoissonE.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonE.Multiline = false;
+            this.txtPoissonE.Name = "txtPoissonE";
+            this.txtPoissonE.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonE.TabIndex = 1;
+            this.txtPoissonE.Text = "2.7183";
+            this.txtPoissonE.TrailingIcon = null;
+            // 
+            // txtPoissonLam
+            // 
+            this.txtPoissonLam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonLam.Depth = 0;
+            this.txtPoissonLam.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonLam.Hint = "Media de λ";
+            this.txtPoissonLam.LeadingIcon = null;
+            this.txtPoissonLam.Location = new System.Drawing.Point(17, 17);
+            this.txtPoissonLam.MaxLength = 50;
+            this.txtPoissonLam.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonLam.Multiline = false;
+            this.txtPoissonLam.Name = "txtPoissonLam";
+            this.txtPoissonLam.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonLam.TabIndex = 0;
+            this.txtPoissonLam.Text = "";
+            this.txtPoissonLam.TrailingIcon = null;
+            this.txtPoissonLam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
+            this.txtPoissonLam.Validating += new System.ComponentModel.CancelEventHandler(this.txtPoissonLam_Validating);
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -536,57 +818,6 @@ namespace Simulacion_U3
             // 
             this.InfoProvider.ContainerControl = this;
             this.InfoProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InfoProvider.Icon")));
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Dato:";
-            // 
-            // bernoutxt
-            // 
-            this.bernoutxt.Location = new System.Drawing.Point(78, 39);
-            this.bernoutxt.Name = "bernoutxt";
-            this.bernoutxt.Size = new System.Drawing.Size(146, 20);
-            this.bernoutxt.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Location = new System.Drawing.Point(318, 39);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 342);
-            this.panel2.TabIndex = 8;
-            this.panel2.Text = "";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(78, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Calcular";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // canttx1
-            // 
-            this.canttx1.Location = new System.Drawing.Point(100, 77);
-            this.canttx1.Name = "canttx1";
-            this.canttx1.Size = new System.Drawing.Size(171, 20);
-            this.canttx1.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Cantidad:";
             // 
             // Form1
             // 
@@ -613,6 +844,11 @@ namespace Simulacion_U3
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).EndInit();
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.materialCard6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TbPoisson)).EndInit();
+            this.materialCard5.ResumeLayout(false);
+            this.materialCard5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).EndInit();
             this.ResumeLayout(false);
@@ -662,6 +898,23 @@ namespace Simulacion_U3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox canttx1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private MaterialSkin.Controls.MaterialCard materialCard6;
+        private System.Windows.Forms.DataGridView TbPoisson;
+        private MaterialSkin.Controls.MaterialCard materialCard5;
+        private MaterialSkin.Controls.MaterialButton btnPoissonOk;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonE;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonLam;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonHoras;
     }
 }
 

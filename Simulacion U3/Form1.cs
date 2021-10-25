@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MathNet.Numerics;
 using MaterialSkin;
 namespace Simulacion_U3
 {
@@ -358,5 +359,142 @@ namespace Simulacion_U3
 
             panel2.AppendText(not);
         }
+
+
+        private void materialButton1_Click_1(object sender, EventArgs e)//boton Ok de poisson
+        {
+            int PoissonLam = Convert.ToInt32(txtPoissonLam.Text);
+            int Numeros = Convert.ToInt32(txtPoissonN.Text);
+            double PoissonE = Convert.ToDouble(txtPoissonE.Text);
+            double formulaPoisson;
+            int horas = Convert.ToInt32(txtPoissonHoras.Text);
+
+            if (Numeros < horas)
+            {
+                errorProvider1.SetError(txtPoissonHoras, "Horas debe ser Menor a Numeros");
+                errorProvider1.SetError(txtPoissonN, "Numeros debe ser Mayor a Horas");
+            }
+            else
+            {
+
+                //tabla y formato de tabla
+                TbPoisson.Rows.Clear();
+                TbPoisson.Columns[1].DefaultCellStyle.Format = "#0.0000";
+                TbPoisson.Columns[2].DefaultCellStyle.Format = "#0.00";
+                TbPoisson.Columns[3].DefaultCellStyle.Format = "#0.00";
+                TbPoisson.Columns[4].DefaultCellStyle.Format = "#0.00";
+                TbPoisson.Columns[6].DefaultCellStyle.Format = "#0.00";
+                TbPoisson.Rows.Add(Numeros + 1);
+                formulaPoisson = ((Math.Pow(PoissonLam, 0) * (Math.Pow(PoissonE, -PoissonLam))));
+                formulaPoisson = formulaPoisson / SpecialFunctions.Factorial(0);
+                TbPoisson[2, 0].Value = formulaPoisson;
+                TbPoisson[3, 0].Value = 0;
+                TbPoisson[4, 0].Value = formulaPoisson;
+                //for
+                for (int i = 0; i < (Numeros + 1); i++)
+                {
+
+                    //llenado de columna 0
+                    TbPoisson[0, i].Value = i;
+                    //llenado de columna 1
+                    formulaPoisson = ((Math.Pow(PoissonLam, i) * (Math.Pow(PoissonE, -PoissonLam))));
+                    formulaPoisson = formulaPoisson / SpecialFunctions.Factorial(i);
+                    TbPoisson[1, i].Value = formulaPoisson;
+                    //llenado de columna 2
+                    if (i > 0)
+                    {
+                        TbPoisson[2, i].Value = Convert.ToDouble(TbPoisson[2, (i - 1)].Value) + Convert.ToDouble(TbPoisson[1, i].Value);
+                        //llenado de columna 3
+                        TbPoisson[3, i].Value = TbPoisson[2, i - 1].Value;
+                        //llenado de columna 4
+                        TbPoisson[4, i].Value = TbPoisson[2, i].Value;
+                    }
+                }//Fin For
+                 //for Horas
+                Random r1 = new Random();
+                try
+                {
+
+                    for (int i = 0; i < horas; i++)
+                    {
+
+                        //llenado de columna 5
+                        double RiPoisson = 0;
+                        TbPoisson[5, i].Value = i + 1;
+
+                        //6
+
+                        RiPoisson = r1.NextDouble();
+
+                        TbPoisson[6, i].Value = RiPoisson;
+                        for (int j = 0; j < Numeros; j++)
+                        {
+                            double DePoisson = Convert.ToDouble(TbPoisson[3, j].Value);
+                            double APoisson = Convert.ToDouble(TbPoisson[4, j].Value);
+                            if ((Convert.ToDouble(TbPoisson[6, i].Value) >= DePoisson) & (Convert.ToDouble(TbPoisson[6, i].Value) < APoisson))
+                            {
+                                TbPoisson[7, i].Value = TbPoisson[0, j].Value;
+                                Console.WriteLine("entro al if");
+                            }
+                        }
+
+
+
+
+
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+
+       
+
+        private void txtPoissonLam_Validating(object sender, CancelEventArgs e)//validacion de Lamda de poisson
+        {
+            if (string.IsNullOrEmpty(txtPoissonLam.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPoissonLam, "Ingresa un numero Entero");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPoissonLam, null);
+            }
+        }
+
+        private void txtPoissonN_Validating(object sender, CancelEventArgs e)//validacion de txtPoissonN
+        {
+            if (string.IsNullOrEmpty(txtPoissonN.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPoissonN, "Ingresa un numero Entero");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPoissonN, null);
+            }
+        }
+
+        private void txtPoissonHoras_Validating(object sender, CancelEventArgs e)//validacion de txtPoissonHoras
+        {
+            if (string.IsNullOrEmpty(txtPoissonHoras.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPoissonHoras, "Ingresa un numero Entero");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPoissonHoras, null);
+            }
+        }
     }
-}
+    }
+

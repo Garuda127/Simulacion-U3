@@ -337,5 +337,26 @@ namespace Simulacion_U3
                 return (0);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double dat2;
+            int tiradas2;
+
+
+            dat2 = Convert.ToDouble(bernoutxt.Text);
+            tiradas2 = Convert.ToInt32(canttx1.Text);
+
+            String not = "X         RI  " + "\n";
+            
+
+
+            for (int i = 0; i < tiradas2; i++)
+            {
+                not += i + "         " + bernou(dat2) + "\n";
+            }
+
+            panel2.AppendText(not);
+        }
     }
 }

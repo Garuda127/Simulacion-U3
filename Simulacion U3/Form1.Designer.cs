@@ -31,7 +31,7 @@ namespace Simulacion_U3
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -47,6 +47,12 @@ namespace Simulacion_U3
             this.TxtA = new MaterialSkin.Controls.MaterialTextBox();
             this.txtN = new MaterialSkin.Controls.MaterialTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tx2 = new System.Windows.Forms.TextBox();
+            this.tx1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
@@ -61,18 +67,19 @@ namespace Simulacion_U3
             this.txtExpN = new MaterialSkin.Controls.MaterialTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.InfoProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tx1 = new System.Windows.Forms.TextBox();
-            this.tx2 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bernoutxt = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.canttx1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUniforme)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.materialCard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).BeginInit();
@@ -297,9 +304,66 @@ namespace Simulacion_U3
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "MC Normal";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.richTextBox1.Location = new System.Drawing.Point(313, 23);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(164, 342);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // tx2
+            // 
+            this.tx2.Location = new System.Drawing.Point(124, 63);
+            this.tx2.Name = "tx2";
+            this.tx2.Size = new System.Drawing.Size(160, 20);
+            this.tx2.TabIndex = 6;
+            // 
+            // tx1
+            // 
+            this.tx1.Location = new System.Drawing.Point(81, 26);
+            this.tx1.Name = "tx1";
+            this.tx1.Size = new System.Drawing.Size(100, 20);
+            this.tx1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 120);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Calcular";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Num. intentos:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Dato:";
+            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.canttx1);
+            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.panel2);
+            this.tabPage4.Controls.Add(this.bernoutxt);
+            this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.ImageKey = "Circle.png";
             this.tabPage4.Location = new System.Drawing.Point(4, 39);
             this.tabPage4.Name = "tabPage4";
@@ -338,8 +402,8 @@ namespace Simulacion_U3
             // 
             this.TbExponencial.AllowUserToAddRows = false;
             this.TbExponencial.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.TbExponencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.TbExponencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TbExponencial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TbExponencial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -473,56 +537,56 @@ namespace Simulacion_U3
             this.InfoProvider.ContainerControl = this;
             this.InfoProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InfoProvider.Icon")));
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dato:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Dato:";
             // 
-            // label2
+            // bernoutxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Num. intentos:";
+            this.bernoutxt.Location = new System.Drawing.Point(78, 39);
+            this.bernoutxt.Name = "bernoutxt";
+            this.bernoutxt.Size = new System.Drawing.Size(146, 20);
+            this.bernoutxt.TabIndex = 1;
             // 
-            // button1
+            // panel2
             // 
-            this.button1.Location = new System.Drawing.Point(46, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel2.Location = new System.Drawing.Point(318, 39);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 342);
+            this.panel2.TabIndex = 8;
+            this.panel2.Text = "";
             // 
-            // tx1
+            // button2
             // 
-            this.tx1.Location = new System.Drawing.Point(81, 26);
-            this.tx1.Name = "tx1";
-            this.tx1.Size = new System.Drawing.Size(100, 20);
-            this.tx1.TabIndex = 5;
+            this.button2.Location = new System.Drawing.Point(78, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Calcular";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tx2
+            // canttx1
             // 
-            this.tx2.Location = new System.Drawing.Point(124, 63);
-            this.tx2.Name = "tx2";
-            this.tx2.Size = new System.Drawing.Size(160, 20);
-            this.tx2.TabIndex = 6;
+            this.canttx1.Location = new System.Drawing.Point(100, 77);
+            this.canttx1.Name = "canttx1";
+            this.canttx1.Size = new System.Drawing.Size(171, 20);
+            this.canttx1.TabIndex = 10;
             // 
-            // richTextBox1
+            // label4
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.richTextBox1.Location = new System.Drawing.Point(313, 23);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(164, 342);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cantidad:";
             // 
             // Form1
             // 
@@ -542,6 +606,8 @@ namespace Simulacion_U3
             this.materialCard1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.materialCard4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).EndInit();
@@ -590,6 +656,12 @@ namespace Simulacion_U3
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox panel2;
+        private System.Windows.Forms.TextBox bernoutxt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox canttx1;
     }
 }
 

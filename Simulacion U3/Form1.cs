@@ -420,59 +420,6 @@ namespace Simulacion_U3
             }
         }
 
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-            if (!TXB1.Text.Equals("") & ((Convert.ToDouble(TXB1.Text)) < 1) & !TXB2.Text.Equals(""))
-            {
-                double n1 = Convert.ToDouble(TXB1.Text);
-                double resi = 1 - n1;
-                int cc = Convert.ToInt32(TXB2.Text);
-                int nu = 10;
-                LBL1.Text = "(1-P) =                   " + resi;
-                int cell = 0;
-                int cell2 = 1;
-                int [][]resul = new int [cc][];
-                String resul2;
-                double pon = (Math.Pow(n1, cell) * Math.Pow(resi, (1 - cell)));
-                double pon2 = (Math.Pow(n1, cell2) * Math.Pow(resi, 1 - cell2)); ;
-                double pon3 = pon + pon2;
-                dataGridView1.Rows.Clear();
-                dataGridView1.Rows.Add(2);
-                dataGridView1[0, 0].Value = cell;
-                dataGridView1[0, 1].Value = cell2;
-                dataGridView1[1, 0].Value = pon;
-                dataGridView1[1, 1].Value = pon2;
-                dataGridView1[2, 0].Value = pon;
-                dataGridView1[2, 1].Value = pon3;
-                dataGridView1.Columns.Clear();
-                dataGridView1.Rows.Clear();
-                int val2 = 0;
-                Random rand1 = new Random();
-                int[][] num1 = new int [cc][] ;
-                for (int i = 0; i < cc; i++)
-                {
-                    for (int j = 0; j < 10; j++)
-                    {
-                        num1[i][j] = rand1.Next(1, 99);
-                    }
-                }
-                for (int i = 0; i < cc; i++)
-                {
-                    for (int j = 0; j < nu; j++)
-                    {
-                        if (0 < (num1[i][j]) & num1[i][j] < (pon * 100))
-                        {
-                            resul[i][j] = 0;
-                        }
-                        else
-                        {
-                            resul[i][j] = 1;
-                        }
-                    }
-                }
-
-            }
-        }
 
         private void btnPoissonOk_Click(object sender, EventArgs e)//btnPoissonOk
         {
@@ -609,6 +556,100 @@ namespace Simulacion_U3
             {
                 e.Cancel = false;
                 errorProvider1.SetError(txtPoissonHoras, null);
+            }
+        }
+
+        private void materialButton2_Click_2(object sender, EventArgs e)
+        {
+            Tab2 = new System.Windows.Forms.DataGridView();
+            panel1.Controls.Add(Tab2);
+            Tab2.Size = new Size(1038, 582);
+
+            if (!TXB2.Text.Equals("") & ((Convert.ToDouble(TXB2.Text)) < 1) & !TXB2.Equals(""))
+            {
+                double n1 = Convert.ToDouble(TXB2.Text);
+                double resi = 1 - n1;
+                int cc = Int32.Parse(TXB1.Text);
+                int nu = 10;
+                LBL1.Text = "(1-P) =                   " + resi;
+                int cell = 0;
+                int cell2 = 1;
+                String[] resul = new String[nu];
+                String[] resul2 = new String[nu];
+                double pon = (Math.Pow(n1, cell) * Math.Pow(resi, (1 - cell)));
+                double pon2 = (Math.Pow(n1, cell2) * Math.Pow(resi, 1 - cell2)); ;
+                double pon3 = pon + pon2;
+                DTab1.Rows.Clear();
+                DTab1.Rows.Add(2);
+                DTab1[0, 0].Value = cell;
+                DTab1[0, 1].Value = cell2;
+                DTab1[1, 0].Value = pon;
+                DTab1[1, 1].Value = pon2;
+                DTab1[2, 0].Value = pon;
+                DTab1[2, 1].Value = pon3;
+                Random nt = new Random();
+                Tab2.Columns.Clear();
+                Tab2.ColumnCount = cc+1;
+                for (int i = 0; i < cc+1; i++)
+                {
+                    if (i < cc)
+                    {
+                        Tab2.Columns[i].Name = "r" + (i + 1);
+                    }
+                    else
+                    {
+                        Tab2.Columns[i].Name = "Resultado";
+                    }
+                    
+                }
+                int[,] mat = new int[cc,10];
+                for (int i = 0; i < cc; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        mat[i, j] = nt.Next(1, 99);
+                    }
+                }
+                String[,] Matriz = new String[(cc + 1), 10];
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < cc; j++)
+                    {
+                        if (0 < (mat[j,i]) & mat[j,i] < (pon * 100))
+                        {
+                            resul[j] = "Aceptado";
+                        }
+                        else
+                        {
+                            resul[j] = "No aceptado";
+                            j = cc + 1;
+                        }
+                    }
+                }
+                for (int i = 0; i < cc+1; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (i<cc)
+                        {
+                            Matriz[i, j] ="0." +mat[i, j];
+                        }
+                        else
+                        {
+                            Matriz[5, j] = resul[j];    
+                        }
+                    }
+                }
+                Tab2.Rows.Clear();
+                Tab2.Rows.Add(10);
+                for (int i = 0; i < cc; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Tab2[i, j].Value = Matriz[i, j];
+                    }
+                }
+               
             }
         }
     }

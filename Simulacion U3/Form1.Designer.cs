@@ -31,11 +31,12 @@ namespace Simulacion_U3
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialCard8 = new MaterialSkin.Controls.MaterialCard();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,10 +102,27 @@ namespace Simulacion_U3
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.InfoProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.materialCard9 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard10 = new MaterialSkin.Controls.MaterialCard();
+            this.TbPoisson = new System.Windows.Forms.DataGridView();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPoissonLam = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPoissonE = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPoissonN = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPoissonHoras = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnPoissonOk = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.materialCard8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.materialCard7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -124,7 +142,10 @@ namespace Simulacion_U3
             ((System.ComponentModel.ISupportInitialize)(this.Tab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            this.materialCard9.SuspendLayout();
+            this.materialCard10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TbPoisson)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -149,6 +170,7 @@ namespace Simulacion_U3
             this.materialTabControl1.Controls.Add(this.tabPage5);
             this.materialTabControl1.Controls.Add(this.tabPage6);
             this.materialTabControl1.Controls.Add(this.tabPage7);
+            this.materialTabControl1.Controls.Add(this.tabPage8);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -187,6 +209,19 @@ namespace Simulacion_U3
             this.materialCard8.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard8.Size = new System.Drawing.Size(1060, 604);
             this.materialCard8.TabIndex = 1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(14, 14);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(1032, 576);
+            this.dataGridView2.TabIndex = 0;
             // 
             // materialCard7
             // 
@@ -634,8 +669,8 @@ namespace Simulacion_U3
             // 
             this.TbExponencial.AllowUserToAddRows = false;
             this.TbExponencial.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.NullValue = "0";
-            this.TbExponencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.NullValue = "0";
+            this.TbExponencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.TbExponencial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TbExponencial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -764,7 +799,7 @@ namespace Simulacion_U3
             // 
             this.tabPage6.Controls.Add(this.materialCard6);
             this.tabPage6.Controls.Add(this.materialCard5);
-            this.tabPage6.ImageIndex = 6;
+            this.tabPage6.ImageKey = "307221771578994916-128.png";
             this.tabPage6.Location = new System.Drawing.Point(4, 39);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1266, 610);
@@ -969,7 +1004,7 @@ namespace Simulacion_U3
             // 
             // tabPage7
             // 
-            this.tabPage7.ImageIndex = 7;
+            this.tabPage7.ImageKey = "letter b.png";
             this.tabPage7.Location = new System.Drawing.Point(4, 39);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(1266, 610);
@@ -986,18 +1021,215 @@ namespace Simulacion_U3
             this.InfoProvider.ContainerControl = this;
             this.InfoProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InfoProvider.Icon")));
             // 
-            // dataGridView2
+            // tabPage8
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(14, 14);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(1032, 576);
-            this.dataGridView2.TabIndex = 0;
+            this.tabPage8.Controls.Add(this.materialCard10);
+            this.tabPage8.Controls.Add(this.materialCard9);
+            this.tabPage8.ImageKey = "uno.png";
+            this.tabPage8.Location = new System.Drawing.Point(4, 39);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "VA TI (poisson)";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // materialCard9
+            // 
+            this.materialCard9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard9.Controls.Add(this.btnPoissonOk);
+            this.materialCard9.Controls.Add(this.txtPoissonHoras);
+            this.materialCard9.Controls.Add(this.txtPoissonN);
+            this.materialCard9.Controls.Add(this.txtPoissonE);
+            this.materialCard9.Controls.Add(this.txtPoissonLam);
+            this.materialCard9.Depth = 0;
+            this.materialCard9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.materialCard9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard9.Location = new System.Drawing.Point(3, 3);
+            this.materialCard9.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard9.Name = "materialCard9";
+            this.materialCard9.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard9.Size = new System.Drawing.Size(200, 604);
+            this.materialCard9.TabIndex = 0;
+            this.materialCard9.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard9_Paint);
+            // 
+            // materialCard10
+            // 
+            this.materialCard10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard10.Controls.Add(this.TbPoisson);
+            this.materialCard10.Depth = 0;
+            this.materialCard10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard10.Location = new System.Drawing.Point(203, 3);
+            this.materialCard10.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard10.Name = "materialCard10";
+            this.materialCard10.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard10.Size = new System.Drawing.Size(1060, 604);
+            this.materialCard10.TabIndex = 1;
+            // 
+            // TbPoisson
+            // 
+            this.TbPoisson.AllowUserToAddRows = false;
+            this.TbPoisson.AllowUserToDeleteRows = false;
+            this.TbPoisson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TbPoisson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21});
+            this.TbPoisson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbPoisson.Location = new System.Drawing.Point(14, 14);
+            this.TbPoisson.Name = "TbPoisson";
+            this.TbPoisson.Size = new System.Drawing.Size(1032, 576);
+            this.TbPoisson.TabIndex = 0;
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column14.HeaderText = "Numeros";
+            this.Column14.Name = "Column14";
+            // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column15.HeaderText = "Probabilidad";
+            this.Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column16.HeaderText = "Probabilidad Acomulada";
+            this.Column16.Name = "Column16";
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column17.HeaderText = "Ri DE";
+            this.Column17.Name = "Column17";
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.HeaderText = "Ri A";
+            this.Column18.Name = "Column18";
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column19.HeaderText = "Horas";
+            this.Column19.Name = "Column19";
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column20.HeaderText = "Ri";
+            this.Column20.Name = "Column20";
+            // 
+            // Column21
+            // 
+            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column21.HeaderText = "No.Piezas";
+            this.Column21.Name = "Column21";
+            // 
+            // txtPoissonLam
+            // 
+            this.txtPoissonLam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonLam.Depth = 0;
+            this.txtPoissonLam.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonLam.Hint = "Media de λ";
+            this.txtPoissonLam.LeadingIcon = null;
+            this.txtPoissonLam.Location = new System.Drawing.Point(17, 17);
+            this.txtPoissonLam.MaxLength = 50;
+            this.txtPoissonLam.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonLam.Multiline = false;
+            this.txtPoissonLam.Name = "txtPoissonLam";
+            this.txtPoissonLam.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonLam.TabIndex = 0;
+            this.txtPoissonLam.Text = "";
+            this.txtPoissonLam.TrailingIcon = null;
+            this.txtPoissonLam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
+            this.txtPoissonLam.Validating += new System.ComponentModel.CancelEventHandler(this.txtPoissonLam_Validating);
+            // 
+            // txtPoissonE
+            // 
+            this.txtPoissonE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonE.Depth = 0;
+            this.txtPoissonE.Enabled = false;
+            this.txtPoissonE.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonE.Hint = "e";
+            this.txtPoissonE.LeadingIcon = null;
+            this.txtPoissonE.Location = new System.Drawing.Point(17, 73);
+            this.txtPoissonE.MaxLength = 50;
+            this.txtPoissonE.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonE.Multiline = false;
+            this.txtPoissonE.Name = "txtPoissonE";
+            this.txtPoissonE.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonE.TabIndex = 1;
+            this.txtPoissonE.Text = "2.7183";
+            this.txtPoissonE.TrailingIcon = null;
+            // 
+            // txtPoissonN
+            // 
+            this.txtPoissonN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonN.Depth = 0;
+            this.txtPoissonN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonN.Hint = "Numeros";
+            this.txtPoissonN.LeadingIcon = null;
+            this.txtPoissonN.Location = new System.Drawing.Point(17, 129);
+            this.txtPoissonN.MaxLength = 50;
+            this.txtPoissonN.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonN.Multiline = false;
+            this.txtPoissonN.Name = "txtPoissonN";
+            this.txtPoissonN.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonN.TabIndex = 2;
+            this.txtPoissonN.Text = "";
+            this.txtPoissonN.TrailingIcon = null;
+            this.txtPoissonN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
+            this.txtPoissonN.Validating += new System.ComponentModel.CancelEventHandler(this.txtPoissonN_Validating);
+            // 
+            // txtPoissonHoras
+            // 
+            this.txtPoissonHoras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoissonHoras.Depth = 0;
+            this.txtPoissonHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPoissonHoras.Hint = "Horas";
+            this.txtPoissonHoras.LeadingIcon = null;
+            this.txtPoissonHoras.Location = new System.Drawing.Point(17, 185);
+            this.txtPoissonHoras.MaxLength = 50;
+            this.txtPoissonHoras.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPoissonHoras.Multiline = false;
+            this.txtPoissonHoras.Name = "txtPoissonHoras";
+            this.txtPoissonHoras.Size = new System.Drawing.Size(166, 50);
+            this.txtPoissonHoras.TabIndex = 3;
+            this.txtPoissonHoras.Text = "";
+            this.txtPoissonHoras.TrailingIcon = null;
+            this.txtPoissonHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
+            this.txtPoissonHoras.Validating += new System.ComponentModel.CancelEventHandler(this.txtPoissonHoras_Validating);
+            // 
+            // btnPoissonOk
+            // 
+            this.btnPoissonOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoissonOk.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPoissonOk.Depth = 0;
+            this.btnPoissonOk.HighEmphasis = true;
+            this.btnPoissonOk.Icon = null;
+            this.btnPoissonOk.Location = new System.Drawing.Point(68, 244);
+            this.btnPoissonOk.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoissonOk.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPoissonOk.Name = "btnPoissonOk";
+            this.btnPoissonOk.Size = new System.Drawing.Size(64, 36);
+            this.btnPoissonOk.TabIndex = 4;
+            this.btnPoissonOk.Text = "Ok";
+            this.btnPoissonOk.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPoissonOk.UseAccentColor = false;
+            this.btnPoissonOk.UseVisualStyleBackColor = true;
+            this.btnPoissonOk.Click += new System.EventHandler(this.btnPoissonOk_Click);
             // 
             // Form1
             // 
@@ -1012,6 +1244,7 @@ namespace Simulacion_U3
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.materialCard8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.materialCard7.ResumeLayout(false);
             this.materialCard7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1037,7 +1270,11 @@ namespace Simulacion_U3
             ((System.ComponentModel.ISupportInitialize)(this.Tab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            this.materialCard9.ResumeLayout(false);
+            this.materialCard9.PerformLayout();
+            this.materialCard10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TbPoisson)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1114,6 +1351,23 @@ namespace Simulacion_U3
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TabPage tabPage8;
+        private MaterialSkin.Controls.MaterialCard materialCard10;
+        private System.Windows.Forms.DataGridView TbPoisson;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private MaterialSkin.Controls.MaterialCard materialCard9;
+        private MaterialSkin.Controls.MaterialButton btnPoissonOk;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonHoras;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonN;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonE;
+        private MaterialSkin.Controls.MaterialTextBox txtPoissonLam;
     }
 }
 

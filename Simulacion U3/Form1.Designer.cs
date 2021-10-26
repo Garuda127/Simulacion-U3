@@ -35,6 +35,16 @@ namespace Simulacion_U3
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialCard8 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.TXB2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.TXB1 = new MaterialSkin.Controls.MaterialTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.tablaUniforme = new System.Windows.Forms.DataGridView();
@@ -54,6 +64,12 @@ namespace Simulacion_U3
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.canttx1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.RichTextBox();
+            this.bernoutxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.TbExponencial = new System.Windows.Forms.DataGridView();
@@ -65,15 +81,32 @@ namespace Simulacion_U3
             this.btnOk = new MaterialSkin.Controls.MaterialButton();
             this.txtExp1 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtExpN = new MaterialSkin.Controls.MaterialTextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
+            this.Tab2 = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.Tab1 = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.TB2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.TB1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.LBL1 = new MaterialSkin.Controls.MaterialLabel();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.InfoProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.bernoutxt = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.canttx1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.materialTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.materialCard8.SuspendLayout();
+            this.materialCard7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUniforme)).BeginInit();
@@ -84,8 +117,14 @@ namespace Simulacion_U3
             this.materialCard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).BeginInit();
             this.materialCard3.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.materialCard6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tab2)).BeginInit();
+            this.materialCard5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -98,6 +137,8 @@ namespace Simulacion_U3
             this.imageList1.Images.SetKeyName(3, "Triangle.png");
             this.imageList1.Images.SetKeyName(4, "gato.png");
             this.imageList1.Images.SetKeyName(5, "uno.png");
+            this.imageList1.Images.SetKeyName(6, "307221771578994916-128.png");
+            this.imageList1.Images.SetKeyName(7, "letter b.png");
             // 
             // materialTabControl1
             // 
@@ -106,6 +147,8 @@ namespace Simulacion_U3
             this.materialTabControl1.Controls.Add(this.tabPage3);
             this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Controls.Add(this.tabPage5);
+            this.materialTabControl1.Controls.Add(this.tabPage6);
+            this.materialTabControl1.Controls.Add(this.tabPage7);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -120,6 +163,8 @@ namespace Simulacion_U3
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.materialCard8);
+            this.tabPage1.Controls.Add(this.materialCard7);
             this.tabPage1.ImageKey = "Home.png";
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
@@ -127,6 +172,142 @@ namespace Simulacion_U3
             this.tabPage1.Size = new System.Drawing.Size(1266, 610);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
+            // 
+            // materialCard8
+            // 
+            this.materialCard8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard8.Controls.Add(this.dataGridView2);
+            this.materialCard8.Depth = 0;
+            this.materialCard8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard8.Location = new System.Drawing.Point(203, 3);
+            this.materialCard8.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard8.Name = "materialCard8";
+            this.materialCard8.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard8.Size = new System.Drawing.Size(1060, 604);
+            this.materialCard8.TabIndex = 1;
+            // 
+            // materialCard7
+            // 
+            this.materialCard7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard7.Controls.Add(this.dataGridView1);
+            this.materialCard7.Controls.Add(this.materialButton2);
+            this.materialCard7.Controls.Add(this.materialLabel1);
+            this.materialCard7.Controls.Add(this.TXB2);
+            this.materialCard7.Controls.Add(this.TXB1);
+            this.materialCard7.Depth = 0;
+            this.materialCard7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard7.Location = new System.Drawing.Point(3, 3);
+            this.materialCard7.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard7.Name = "materialCard7";
+            this.materialCard7.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard7.Size = new System.Drawing.Size(200, 604);
+            this.materialCard7.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 253);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(197, 150);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "X";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "P(x)";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "P(x)";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(46, 186);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.Size = new System.Drawing.Size(95, 36);
+            this.materialButton2.TabIndex = 3;
+            this.materialButton2.Text = "Calcular";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(18, 145);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(136, 19);
+            this.materialLabel1.TabIndex = 2;
+            this.materialLabel1.Text = "1-p=                        ?";
+            // 
+            // TXB2
+            // 
+            this.TXB2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TXB2.Depth = 0;
+            this.TXB2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TXB2.Hint = "P";
+            this.TXB2.LeadingIcon = null;
+            this.TXB2.Location = new System.Drawing.Point(18, 74);
+            this.TXB2.MaxLength = 50;
+            this.TXB2.MouseState = MaterialSkin.MouseState.OUT;
+            this.TXB2.Multiline = false;
+            this.TXB2.Name = "TXB2";
+            this.TXB2.Size = new System.Drawing.Size(165, 50);
+            this.TXB2.TabIndex = 1;
+            this.TXB2.Text = "";
+            this.TXB2.TrailingIcon = null;
+            // 
+            // TXB1
+            // 
+            this.TXB1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TXB1.Depth = 0;
+            this.TXB1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TXB1.Hint = "N";
+            this.TXB1.LeadingIcon = null;
+            this.TXB1.Location = new System.Drawing.Point(17, 18);
+            this.TXB1.MaxLength = 50;
+            this.TXB1.MouseState = MaterialSkin.MouseState.OUT;
+            this.TXB1.Multiline = false;
+            this.TXB1.Name = "TXB1";
+            this.TXB1.Size = new System.Drawing.Size(165, 50);
+            this.TXB1.TabIndex = 0;
+            this.TXB1.Text = "";
+            this.TXB1.TrailingIcon = null;
             // 
             // tabPage2
             // 
@@ -371,6 +552,57 @@ namespace Simulacion_U3
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "VA TI Bernoulli";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cantidad:";
+            // 
+            // canttx1
+            // 
+            this.canttx1.Location = new System.Drawing.Point(100, 77);
+            this.canttx1.Name = "canttx1";
+            this.canttx1.Size = new System.Drawing.Size(171, 20);
+            this.canttx1.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(78, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Calcular";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel2.Location = new System.Drawing.Point(318, 39);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 342);
+            this.panel2.TabIndex = 8;
+            this.panel2.Text = "";
+            // 
+            // bernoutxt
+            // 
+            this.bernoutxt.Location = new System.Drawing.Point(78, 39);
+            this.bernoutxt.Name = "bernoutxt";
+            this.bernoutxt.Size = new System.Drawing.Size(146, 20);
+            this.bernoutxt.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Dato:";
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.materialCard4);
@@ -528,6 +760,223 @@ namespace Simulacion_U3
             this.txtExpN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpN_KeyPress);
             this.txtExpN.Validating += new System.ComponentModel.CancelEventHandler(this.txtExpN_Validating);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.materialCard6);
+            this.tabPage6.Controls.Add(this.materialCard5);
+            this.tabPage6.ImageIndex = 6;
+            this.tabPage6.Location = new System.Drawing.Point(4, 39);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Va ti(Bernoulli)";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // materialCard6
+            // 
+            this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard6.Controls.Add(this.Tab2);
+            this.materialCard6.Depth = 0;
+            this.materialCard6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard6.Location = new System.Drawing.Point(211, 0);
+            this.materialCard6.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard6.Name = "materialCard6";
+            this.materialCard6.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard6.Size = new System.Drawing.Size(1055, 610);
+            this.materialCard6.TabIndex = 1;
+            // 
+            // Tab2
+            // 
+            this.Tab2.AllowUserToAddRows = false;
+            this.Tab2.AllowUserToDeleteRows = false;
+            this.Tab2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tab2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Tab2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13});
+            this.Tab2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab2.Location = new System.Drawing.Point(14, 14);
+            this.Tab2.Name = "Tab2";
+            this.Tab2.ReadOnly = true;
+            this.Tab2.Size = new System.Drawing.Size(1027, 582);
+            this.Tab2.TabIndex = 0;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "Dias";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column11.HeaderText = "ri";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.HeaderText = "xi";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column13.HeaderText = "Evento de";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // materialCard5
+            // 
+            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard5.Controls.Add(this.Tab1);
+            this.materialCard5.Controls.Add(this.materialButton1);
+            this.materialCard5.Controls.Add(this.TB2);
+            this.materialCard5.Controls.Add(this.TB1);
+            this.materialCard5.Controls.Add(this.materialLabel2);
+            this.materialCard5.Controls.Add(this.LBL1);
+            this.materialCard5.Depth = 0;
+            this.materialCard5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard5.Location = new System.Drawing.Point(0, 0);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard5.Name = "materialCard5";
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard5.Size = new System.Drawing.Size(211, 610);
+            this.materialCard5.TabIndex = 0;
+            // 
+            // Tab1
+            // 
+            this.Tab1.AllowUserToAddRows = false;
+            this.Tab1.AllowUserToDeleteRows = false;
+            this.Tab1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tab1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Tab1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.Tab1.Location = new System.Drawing.Point(17, 304);
+            this.Tab1.Name = "Tab1";
+            this.Tab1.ReadOnly = true;
+            this.Tab1.Size = new System.Drawing.Size(183, 150);
+            this.Tab1.TabIndex = 5;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "X";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "P(x)";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "P(x)";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(67, 259);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Size = new System.Drawing.Size(95, 36);
+            this.materialButton1.TabIndex = 4;
+            this.materialButton1.Text = "Calcular";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click_1);
+            // 
+            // TB2
+            // 
+            this.TB2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TB2.Depth = 0;
+            this.TB2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TB2.Hint = "Dias";
+            this.TB2.LeadingIcon = null;
+            this.TB2.Location = new System.Drawing.Point(29, 84);
+            this.TB2.MaxLength = 50;
+            this.TB2.MouseState = MaterialSkin.MouseState.OUT;
+            this.TB2.Multiline = false;
+            this.TB2.Name = "TB2";
+            this.TB2.Size = new System.Drawing.Size(165, 50);
+            this.TB2.TabIndex = 3;
+            this.TB2.Text = "";
+            this.TB2.TrailingIcon = null;
+            // 
+            // TB1
+            // 
+            this.TB1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TB1.Depth = 0;
+            this.TB1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TB1.Hint = "p=";
+            this.TB1.LeadingIcon = null;
+            this.TB1.Location = new System.Drawing.Point(29, 17);
+            this.TB1.MaxLength = 50;
+            this.TB1.MouseState = MaterialSkin.MouseState.OUT;
+            this.TB1.Multiline = false;
+            this.TB1.Name = "TB1";
+            this.TB1.Size = new System.Drawing.Size(165, 50);
+            this.TB1.TabIndex = 2;
+            this.TB1.Text = "";
+            this.TB1.TrailingIcon = null;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(49, 204);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(113, 19);
+            this.materialLabel2.TabIndex = 1;
+            this.materialLabel2.Text = "X=                  0,1";
+            // 
+            // LBL1
+            // 
+            this.LBL1.AutoSize = true;
+            this.LBL1.Depth = 0;
+            this.LBL1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LBL1.Location = new System.Drawing.Point(49, 158);
+            this.LBL1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LBL1.Name = "LBL1";
+            this.LBL1.Size = new System.Drawing.Size(124, 19);
+            this.LBL1.TabIndex = 0;
+            this.LBL1.Text = "1-p=                     ?";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.ImageIndex = 7;
+            this.tabPage7.Location = new System.Drawing.Point(4, 39);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -537,56 +986,18 @@ namespace Simulacion_U3
             this.InfoProvider.ContainerControl = this;
             this.InfoProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InfoProvider.Icon")));
             // 
-            // label3
+            // dataGridView2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Dato:";
-            // 
-            // bernoutxt
-            // 
-            this.bernoutxt.Location = new System.Drawing.Point(78, 39);
-            this.bernoutxt.Name = "bernoutxt";
-            this.bernoutxt.Size = new System.Drawing.Size(146, 20);
-            this.bernoutxt.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Location = new System.Drawing.Point(318, 39);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 342);
-            this.panel2.TabIndex = 8;
-            this.panel2.Text = "";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(78, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Calcular";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // canttx1
-            // 
-            this.canttx1.Location = new System.Drawing.Point(100, 77);
-            this.canttx1.Name = "canttx1";
-            this.canttx1.Size = new System.Drawing.Size(171, 20);
-            this.canttx1.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Cantidad:";
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(14, 14);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(1032, 576);
+            this.dataGridView2.TabIndex = 0;
             // 
             // Form1
             // 
@@ -599,6 +1010,11 @@ namespace Simulacion_U3
             this.Name = "Form1";
             this.Text = "Simulacion U3";
             this.materialTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.materialCard8.ResumeLayout(false);
+            this.materialCard7.ResumeLayout(false);
+            this.materialCard7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaUniforme)).EndInit();
@@ -613,8 +1029,15 @@ namespace Simulacion_U3
             ((System.ComponentModel.ISupportInitialize)(this.TbExponencial)).EndInit();
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.materialCard6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Tab2)).EndInit();
+            this.materialCard5.ResumeLayout(false);
+            this.materialCard5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -662,6 +1085,35 @@ namespace Simulacion_U3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox canttx1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private MaterialSkin.Controls.MaterialCard materialCard6;
+        private MaterialSkin.Controls.MaterialCard materialCard5;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialTextBox TB2;
+        private MaterialSkin.Controls.MaterialTextBox TB1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel LBL1;
+        private System.Windows.Forms.DataGridView Tab2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridView Tab1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private MaterialSkin.Controls.MaterialCard materialCard8;
+        private MaterialSkin.Controls.MaterialCard materialCard7;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialTextBox TXB2;
+        private MaterialSkin.Controls.MaterialTextBox TXB1;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

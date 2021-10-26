@@ -358,5 +358,118 @@ namespace Simulacion_U3
 
             panel2.AppendText(not);
         }
+
+        private void materialButton1_Click_1(object sender, EventArgs e)
+        {
+            if (!TB1.Text.Equals("") & ((Convert.ToDouble(TB1.Text)) < 1) & !TB2.Text.Equals(""))
+            {
+                double n1 = Convert.ToDouble(TB1.Text);
+                double resi = 1 - n1;
+                int n = Convert.ToInt32(TB2.Text);
+                LBL1.Text = "(1-P) =                   " + resi;
+                int cell = 0;
+                int cell2 = 1;
+                int resul;
+                String resul2;
+                double pon = (Math.Pow(n1, cell) * Math.Pow(resi, (1 - cell)));
+                double pon2 = (Math.Pow(n1, cell2) * Math.Pow(resi, 1 - cell2)); ;
+                double pon3 = pon + pon2;
+                Tab1.Rows.Clear();
+                Tab1.Rows.Add(2);
+                Tab1[0, 0].Value = cell;
+                Tab1[0, 1].Value = cell2;
+                Tab1[1, 0].Value = pon;
+                Tab1[1, 1].Value = pon2;
+                Tab1[2, 0].Value = pon;
+                Tab1[2, 1].Value = pon3;
+                Tab2.Rows.Clear();
+                Tab2.Rows.Add(n);
+                int val2 = 0;
+                Random rand1 = new Random();
+                int[] num1 = new int[n];
+                for (int i = 0; i < n; i++)
+                {
+                    num1[i] = rand1.Next(1, 99);
+                }
+                for (int i = 0; i < n; i++)
+                {
+
+                    if (0 < (num1[i]) & num1[i] < (pon * 100))
+                    {
+                        resul = 0;
+                        resul2 = "NO FALLA";
+                    }
+                    else
+                    {
+                        resul = 1;
+                        resul2 = "FALLA";
+                    }
+
+
+                    Tab2[0, i].Value = i + 1;
+                    Tab2[1, i].Value = "0." + num1[i];
+                    Tab2[2, i].Value = resul;
+                    Tab2[3, i].Value = resul2;
+                }
+            }
+            else
+            {
+                
+            }
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            if (!TXB1.Text.Equals("") & ((Convert.ToDouble(TXB1.Text)) < 1) & !TXB2.Text.Equals(""))
+            {
+                double n1 = Convert.ToDouble(TXB1.Text);
+                double resi = 1 - n1;
+                int cc = Convert.ToInt32(TXB2.Text);
+                int nu = 10;
+                LBL1.Text = "(1-P) =                   " + resi;
+                int cell = 0;
+                int cell2 = 1;
+                int [][]resul = new int [cc][];
+                String resul2;
+                double pon = (Math.Pow(n1, cell) * Math.Pow(resi, (1 - cell)));
+                double pon2 = (Math.Pow(n1, cell2) * Math.Pow(resi, 1 - cell2)); ;
+                double pon3 = pon + pon2;
+                dataGridView1.Rows.Clear();
+                dataGridView1.Rows.Add(2);
+                dataGridView1[0, 0].Value = cell;
+                dataGridView1[0, 1].Value = cell2;
+                dataGridView1[1, 0].Value = pon;
+                dataGridView1[1, 1].Value = pon2;
+                dataGridView1[2, 0].Value = pon;
+                dataGridView1[2, 1].Value = pon3;
+                dataGridView1.Columns.Clear();
+                dataGridView1.Rows.Clear();
+                int val2 = 0;
+                Random rand1 = new Random();
+                int[][] num1 = new int [cc][] ;
+                for (int i = 0; i < cc; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        num1[i][j] = rand1.Next(1, 99);
+                    }
+                }
+                for (int i = 0; i < cc; i++)
+                {
+                    for (int j = 0; j < nu; j++)
+                    {
+                        if (0 < (num1[i][j]) & num1[i][j] < (pon * 100))
+                        {
+                            resul[i][j] = 0;
+                        }
+                        else
+                        {
+                            resul[i][j] = 1;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }

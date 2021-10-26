@@ -25,3 +25,16 @@ C:\Users\hecto\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion
 C:\Users\hecto\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.CoreCompileInputs.cache
 C:\Users\hecto\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.exe
 C:\Users\hecto\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.pdb
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\bin\Debug\Simulacion U3.exe.config
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\bin\Debug\Simulacion U3.exe
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\bin\Debug\Simulacion U3.pdb
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\bin\Debug\MaterialSkin.dll
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\bin\Debug\MathNet.Numerics.dll
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\bin\Debug\MathNet.Numerics.xml
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.AssemblyReference.cache
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion_U3.Form1.resources
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion_U3.Properties.Resources.resources
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.GenerateResource.cache
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.csproj.CoreCompileInputs.cache
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.exe
+C:\Users\lpmex\Documents\GitHub\Simulacion-U3\Simulacion U3\obj\Debug\Simulacion U3.pdb

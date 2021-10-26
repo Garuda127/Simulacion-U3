@@ -420,17 +420,22 @@ namespace Simulacion_U3
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            if (!TXB1.Text.Equals("") & ((Convert.ToDouble(TXB1.Text)) < 1) & !TXB2.Text.Equals(""))
+            
+            }
+
+        private void materialButton2_Click_1(object sender, EventArgs e)
+        {
+            if (!TXB2.Text.Equals("") & ((Convert.ToDouble(TXB2.Text)) < 1))
             {
                 double n1 = Convert.ToDouble(TXB1.Text);
                 double resi = 1 - n1;
-                int cc = Convert.ToInt32(TXB2.Text);
+                int cc = Convert.ToInt32(TXB1.Text);
                 int nu = 10;
                 LBL1.Text = "(1-P) =                   " + resi;
                 int cell = 0;
                 int cell2 = 1;
-                int [][]resul = new int [cc][];
-                String resul2;
+                int[] resul = new int[nu];
+
                 double pon = (Math.Pow(n1, cell) * Math.Pow(resi, (1 - cell)));
                 double pon2 = (Math.Pow(n1, cell2) * Math.Pow(resi, 1 - cell2)); ;
                 double pon3 = pon + pon2;
@@ -446,27 +451,48 @@ namespace Simulacion_U3
                 dataGridView1.Rows.Clear();
                 int val2 = 0;
                 Random rand1 = new Random();
-                int[][] num1 = new int [cc][] ;
+                int[,] num1 = new int[cc,nu];
                 for (int i = 0; i < cc; i++)
                 {
-                    for (int j = 0; j < 10; j++)
+                    for (int j = 0; j < nu; j++)
                     {
-                        num1[i][j] = rand1.Next(1, 99);
+                        num1[i,j] = rand1.Next(1, 99);
                     }
                 }
                 for (int i = 0; i < cc; i++)
                 {
                     for (int j = 0; j < nu; j++)
                     {
-                        if (0 < (num1[i][j]) & num1[i][j] < (pon * 100))
+                        if (0 < (num1[i,j]) & num1[i,j] < (pon * 100))
                         {
-                            resul[i][j] = 0;
+                            resul[j] += 0;
                         }
                         else
                         {
-                            resul[i][j] = 1;
+                            resul[j] += 1;
                         }
                     }
+                }
+                String[][] resul2 = new String[cc * 2][];
+                DataTable dt = new DataTable();
+                for (int i = 0; i < cc ; i++)
+                {
+                    for (int j = 0; j < nu; j++)
+                    {
+                        if (i < cc)
+                        {
+                            resul2[i][j] = num1[i,j] + "";
+                        }
+                        else
+                        {
+                            resul2[i][j] = resul[j] + "";
+                        }
+
+                    }
+                }
+                for (int i = 0; i < nu; i++)
+                {
+                    dt.LoadDataRow(resul2[i], true);
                 }
 
             }
